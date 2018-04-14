@@ -1,0 +1,26 @@
+body {
+    background: url("../images/pol.jpg")center;
+    
+}
+#container {
+    width: 60%;
+    background: linear-gradient(to right, #f00000, #dc281e);
+    padding: 12px;
+    overflow: auto;
+    margin: 30px auto;
+    position: relative;
+    color: white;
+}
+
+header {
+    text-align: center;
+    
+
+}
+  
+#submit {
+    color: black;
+}
+
+
+
