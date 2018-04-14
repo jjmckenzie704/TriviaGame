@@ -1,6 +1,8 @@
+score = 0;
+
 function submitAnswers(){
     var total = 10;
-    var score = 0;
+    
 
 
 var q1 = document.forms["triviaForm"]["q1"].value;
@@ -26,9 +28,9 @@ for (i = 1; i <= total; i++){
 var answers = ["d","b","c","a","b","b","c","a","d","d"];
 
 for(i = 1; i <= total;i++){
-    if(eval("q" + 1) == answers[i - 1]) 
+    if(eval("q" + i) == answers[i - 1]) 
         score++;
-    
+    console.log(score);
 }
 
 var results = document.getElementById("results");
@@ -38,3 +40,6 @@ alert("You answered "+score+" correct");
 
 return false;
 }
+
+
+
