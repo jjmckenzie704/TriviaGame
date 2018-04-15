@@ -1,5 +1,41 @@
 score = 0;
 
+$(document).ready(function() {
+    $("#startBtn").click(function(){
+        var number = 60;
+        var intervalId;
+        function run() {
+            clearInterval(intervalId);
+            intervalId = setInterval(decrement, 1000);
+          }
+
+        $("#startBtn").on("click", start); 
+        function start(){
+            counter = setInterval(timer, 1000);
+        }
+        function decrement() {
+            number--;
+        }
+        function timer(){
+          number--;
+          $("#show-timer").html("<h2>" + number + "</h2>" );
+          if (number === 0){
+            alert("Times Up!")
+            stop();
+          }
+        }
+        function stop(){
+            clearInterval(counter);
+        }
+        function finish(){
+            number = 1; 
+            clearInterval(counter); 
+            timer();
+        }
+        
+    });
+  });
+
 function submitAnswers(){
     var total = 10;
     
@@ -40,6 +76,7 @@ alert("You answered "+score+" correct");
 
 return false;
 }
+
 
 
 
